@@ -64,20 +64,18 @@ class FirstPage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top:150),
+              padding: const EdgeInsets.only(top: 100),
               child: Text(
                 """Stay Covered,Stay Connected
                      With Us.""",
-                style: TextStyle(
-                    color: Color(0xFF1E1E1E),fontSize: 15
-                ),
+                style: TextStyle(color: Color(0xFF1E1E1E), fontSize: 15),
               ),
             ),
-
             Spacer(),
             ElevatedButton(
               onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>SignIn()));
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => SignIn()));
               },
               style: ElevatedButton.styleFrom(
                 primary: Colors.orange, // Set the button color to orange
@@ -86,7 +84,9 @@ class FirstPage extends StatelessWidget {
                       BorderRadius.circular(30.0), // Add rounded corners
                 ),
               ),
-              child: Text("Let's Go!",style:TextStyle(fontWeight: FontWeight.w700),
+              child: Text(
+                "Let's Go!",
+                style: TextStyle(fontWeight: FontWeight.w700),
               ),
             ),
           ],

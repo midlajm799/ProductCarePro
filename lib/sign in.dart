@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:sample/homepage.dart';
 
 class SignIn extends StatelessWidget {
   SignIn({super.key});
   TextEditingController emailcontroller = TextEditingController();
+  TextEditingController passwordcontroller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -50,6 +52,7 @@ class SignIn extends StatelessWidget {
                 child: SizedBox(
                   height: 50,
                   child: TextFormField(
+                    controller: passwordcontroller,
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.grey[300],
@@ -66,27 +69,30 @@ class SignIn extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(top:15),
-                child: Text('not have an account?sign up'),
+                child: Text('forgot password?'),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 10),
                 child: ElevatedButton(
                   onPressed: () {
-                    print(emailcontroller.text);
-                    // Navigator.push(context, MaterialPageRoute(builder: (context)=>SignIn()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.orange, // Set the button color to orange
+                    primary: Colors.blue.shade900, // Set the button color to darkblue
                     shape: RoundedRectangleBorder(
                       borderRadius:
                           BorderRadius.circular(30.0), // Add rounded corners
                     ),
                   ),
                   child: Text(
-                    "Sign In!",
+                    "Sign in",
                     style: TextStyle(fontWeight: FontWeight.w700),
                   ),
                 ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top:5),
+                child: Text('not have an account?Sign up'),
               ),
             ],
           ),
