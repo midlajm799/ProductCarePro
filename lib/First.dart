@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sample/sign%20in.dart';
 
 class FirstPage extends StatelessWidget {
   const FirstPage({super.key});
@@ -76,8 +77,7 @@ class FirstPage extends StatelessWidget {
             Spacer(),
             ElevatedButton(
               onPressed: () {
-                // Add your button press logic here
-                print('Button Pressed');
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>SignIn()));
               },
               style: ElevatedButton.styleFrom(
                 primary: Colors.orange, // Set the button color to orange
