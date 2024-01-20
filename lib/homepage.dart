@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  'Rgister Warranty',
+                  'Register Warranty',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18,
@@ -56,14 +56,14 @@ class HomePage extends StatelessWidget {
               width: 350,
               height: 120,
               decoration: BoxDecoration(
-                color: Colors.blue.shade900,
+                color: Color.fromARGB(255, 4, 46, 108),
                 borderRadius: BorderRadius.circular(15.0),
               ),
               alignment: Alignment.topLeft,
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  'Rgister Complaint',
+                  'Register Complaint',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18,
