@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sample/homepage.dart';
+import 'package:sample/signup.dart';
 
 class SignIn extends StatelessWidget {
   SignIn({super.key});
@@ -94,9 +95,8 @@ class SignIn extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 5),
                 child: InkWell(
                   onTap: () {
-                    // Add your functionality when the text is tapped
-                    print('Sign up tapped!');
-                    // Add navigation or other actions here
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => SignUp()));
                   },
                   child: Text(
                     'Not have an account? Sign up',

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sample/Shop.dart';
 import 'package:sample/sign%20in.dart';
+import 'package:sample/signup.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -15,27 +16,32 @@ class HomePage extends StatelessWidget {
             SizedBox(
               height: 80,
             ),
-            Container(
-              width: 180,
-              height: 40,
-              decoration: BoxDecoration(
-                  color: Colors.grey.shade300,
-                  borderRadius: BorderRadius.circular(10)),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  // SizedBox(width: 40,),
-                  Image.asset(
-                    'assets/logo profile.png',
-                    width: 25,
-                    color: Colors.grey.shade800,
-                  ),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  Text('Account')
-                ],
+            InkWell(
+              onTap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>SignUp()));
+              },
+              child: Container(
+                width: 180,
+                height: 40,
+                decoration: BoxDecoration(
+                    color: Colors.grey.shade300,
+                    borderRadius: BorderRadius.circular(10)),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    // SizedBox(width: 40,),
+                    Image.asset(
+                      'assets/logo profile.png',
+                      width: 25,
+                      color: Colors.grey.shade800,
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Text('Account')
+                  ],
+                ),
               ),
             ),
             SizedBox(
