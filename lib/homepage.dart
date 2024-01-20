@@ -8,14 +8,90 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        width: 250,
+        child: Column(
+          children: [
+            SizedBox(
+              height: 80,
+            ),
+            Container(
+              width: 180,
+              height: 40,
+              decoration: BoxDecoration(
+                  color: Colors.grey.shade300,
+                  borderRadius: BorderRadius.circular(10)),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // SizedBox(width: 40,),
+                  Image.asset(
+                    'assets/logo profile.png',
+                    width: 25,
+                    color: Colors.grey.shade800,
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Text('Account')
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            InkWell(
+              onTap: () {},
+              child: Container(
+                width: 180,
+                height: 40,
+                decoration: BoxDecoration(
+                    color: Colors.grey.shade300,
+                    borderRadius: BorderRadius.circular(10)),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [Text('About Us')],
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0, // Set elevation to 0 to remove shadows
+        leading: Builder(builder: (context) {
+          return IconButton(
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
+            icon: ImageIcon(
+              AssetImage('assets/menu.png'),
+              color: Colors.black,
+            ),
+          );
+        }),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: ImageIcon(
+              AssetImage('assets/logobell.png'),
+              color: Colors.black,
+            ),
+          )
+        ],
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             InkWell(
-              onTap: () { 
+              onTap: () {
                 // Add your functionality for the "Shop" button
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>Shop()));
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Shop()));
               },
               child: Container(
                 width: 350,

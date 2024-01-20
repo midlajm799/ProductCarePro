@@ -91,9 +91,23 @@ class SignIn extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top:5),
-                child: Text('not have an account?Sign up'),
-              ),
+                padding: const EdgeInsets.only(top: 5),
+                child: InkWell(
+                  onTap: () {
+                    // Add your functionality when the text is tapped
+                    print('Sign up tapped!');
+                    // Add navigation or other actions here
+                  },
+                  child: Text(
+                    'Not have an account? Sign up',
+                    style: TextStyle(
+                      color: Colors.black, // Set the text color
+                      decoration: TextDecoration.underline, // Add underline decoration
+                    ),
+                  ),
+                ),
+              )
+
             ],
           ),
         ),
