@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:sample/homepage.dart';
+import 'package:sample/otp.dart';
 import 'package:sample/signup.dart';
 
 class SignIn extends StatelessWidget {
-  SignIn({super.key});
-  TextEditingController emailcontroller = TextEditingController();
-  TextEditingController passwordcontroller = TextEditingController();
+  SignIn({Key? key}) : super(key: key);
+
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       body: Container(
         margin: EdgeInsets.only(bottom: 60),
@@ -28,86 +29,98 @@ class SignIn extends StatelessWidget {
                 width: 250,
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 60, right: 60),
+                padding: const EdgeInsets.symmetric(horizontal: 60),
                 child: SizedBox(
                   height: 50,
                   width: 340,
                   child: TextFormField(
-                    controller: emailcontroller,
+                    controller: emailController,
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.grey[300],
                       labelText: 'Email',
                       labelStyle: TextStyle(fontWeight: FontWeight.bold),
                       border: OutlineInputBorder(
-                        borderRadius:
-                            BorderRadius.circular(10.0), // Add curved edges
-                        borderSide: BorderSide.none, // Remove the border
+                        borderRadius: BorderRadius.circular(10.0),
+                        borderSide: BorderSide.none,
                       ),
                     ),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 60, right: 60, top: 15),
+                padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 15),
                 child: SizedBox(
                   height: 50,
                   child: TextFormField(
-                    controller: passwordcontroller,
+                    obscureText: true,
+                    controller: passwordController,
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.grey[300],
-                      labelText: 'password',
+                      labelText: 'Password',
                       labelStyle: TextStyle(fontWeight: FontWeight.bold),
                       border: OutlineInputBorder(
-                        borderRadius:
-                            BorderRadius.circular(10.0), // Add curved edges
-                        borderSide: BorderSide.none, // Remove the border
+                        borderRadius: BorderRadius.circular(10.0),
+                        borderSide: BorderSide.none,
                       ),
                     ),
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top:15),
-                child: Text('forgot password?'),
+              TextButton(
+                onPressed: () {
+                  // Navigate to the OTP screen
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Otp()),
+                  );
+                },
+                child: Text(
+                  'Forgot password?',
+                  style: TextStyle(color: Colors.grey.shade900),
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 10),
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomePage()),
+                    );
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.blue.shade900, // Set the button color to darkblue
+                    primary: Colors.blue.shade900,
                     shape: RoundedRectangleBorder(
-                      borderRadius:
-                          BorderRadius.circular(30.0), // Add rounded corners
+                      borderRadius: BorderRadius.circular(30.0),
                     ),
                   ),
                   child: Text(
-                    "Sign in",
+                    "Sign In",
                     style: TextStyle(fontWeight: FontWeight.w700),
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 5),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => SignUp()));
-                  },
-                  child: Text(
-                    'Not have an account? Sign up',
-                    style: TextStyle(
-                      color: Colors.black, // Set the text color
-                      decoration: TextDecoration.underline, // Add underline decoration
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Don't have an account? "),
+                  TextButton(
+                    onPressed: () {
+                      // Navigate to the sign-up screen
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SignUp()),
+                      );
+                    },
+                    child: Text(
+                      'Sign up',
+                      style: TextStyle(color: Colors.orange),
                     ),
                   ),
-                ),
-              )
-
+                ],
+              ),
             ],
           ),
         ),
