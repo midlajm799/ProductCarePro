@@ -7,6 +7,8 @@ class FirstPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Height=MediaQuery.of(context).size.height;
+    final Width=MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
       body: Container(
@@ -17,11 +19,11 @@ class FirstPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(height: 200),
+            SizedBox(height: Height*0.1),
             Image.asset(
               'assets/logo1.jpg',
-              height: 250,
-              width: 250,
+              height: Height*0.5,
+              width: Width*0.65,
             ),
             Stack(
               children: [
@@ -30,7 +32,7 @@ class FirstPage extends StatelessWidget {
                   style: TextStyle(
                       color: Color(0x33383C72),
                       fontWeight: FontWeight.bold,
-                      fontSize: 30),
+                      fontSize: Height*0.038),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 22),
@@ -39,7 +41,7 @@ class FirstPage extends StatelessWidget {
                     style: TextStyle(
                         color: Color(0x33383C72),
                         fontWeight: FontWeight.bold,
-                        fontSize: 30),
+                        fontSize:Height*0.038),
                   ),
                 ),
                 Padding(
@@ -49,27 +51,29 @@ class FirstPage extends StatelessWidget {
                     style: TextStyle(
                         color: Color(0xFF383C72),
                         fontWeight: FontWeight.bold,
-                        fontSize: 30),
+                        fontSize: Height*0.038),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom:  5,top: 50),
+                  child:
+                  Text(
+                    'CARE PRO.',
+                    style: TextStyle(
+                        color: Color(0xFF383C72),
+                        fontWeight: FontWeight.bold,
+                        fontSize: Height*0.036),
                   ),
                 ),
               ],
             ),
+
             Padding(
-              padding: const EdgeInsets.only(bottom: 50),
-              child: Text(
-                'CARE PRO.',
-                style: TextStyle(
-                    color: Color(0xFF383C72),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 28),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 100),
+              padding: const EdgeInsets.only(top: 55),
               child: Text(
                 """Stay Covered,Stay Connected
-                     With Us.""",
-                style: TextStyle(color: Color(0xFF1E1E1E), fontSize: 15),
+                   With Us.""",
+                style: TextStyle(color: Color(0xFF1E1E1E), fontSize: Height*0.017),
               ),
             ),
             Spacer(),
@@ -87,7 +91,7 @@ class FirstPage extends StatelessWidget {
               ),
               child: Text(
                 "Let's Go!",
-                style: TextStyle(fontWeight: FontWeight.w700),
+                style: TextStyle(color:Colors.white,fontWeight: FontWeight.w700),
               ),
             ),
           ],
