@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sample/homepage.dart';
 
 class Account extends StatelessWidget {
   const Account ({super.key});
@@ -18,7 +19,9 @@ class Account extends StatelessWidget {
                 children: [SizedBox(width: Width*0.02,),
                   IconButton(
                     icon: Icon(Icons.arrow_back_ios),color:Colors.black,
-                    onPressed:() {},),
+                    onPressed:() {
+                      Navigator.push(context,MaterialPageRoute(builder: (context) => HomePage()));
+                    },),
                   Text("Back",style: TextStyle(fontSize: Height*0.025),),
                 ],
               )
