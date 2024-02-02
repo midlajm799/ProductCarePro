@@ -98,7 +98,7 @@ class SignIn extends StatelessWidget {
                   ),
                   child: Text(
                     "Sign In",
-                    style: TextStyle(fontWeight: FontWeight.w700),
+                    style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700),
                   ),
                 ),
               ),
