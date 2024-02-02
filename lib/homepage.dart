@@ -10,21 +10,23 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Height = MediaQuery.of(context).size.height;
+    final Width = MediaQuery.of(context).size.height;
     return Scaffold(
       drawer: Drawer(
-        width: 250,
+        width: Width*.30,
         child: Column(
           children: [
             SizedBox(
-              height: 80,
+              height: Height*0.10,
             ),
             InkWell(
               onTap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context)=>account()));
               },
               child: Container(
-                width: 180,
-                height: 40,
+                width: Width*0.22,
+                height: Height*0.05,
                 decoration: BoxDecoration(
                     color: Colors.grey.shade300,
                     borderRadius: BorderRadius.circular(10)),
@@ -35,11 +37,11 @@ class HomePage extends StatelessWidget {
                     // SizedBox(width: 40,),
                     Image.asset(
                       'assets/logo profile.png',
-                      width: 25,
+                      width: Width*0.030,
                       color: Colors.grey.shade800,
                     ),
                     SizedBox(
-                      width: 5,
+                      width: Width*0.005,
                     ),
                     Text('Account')
                   ],
@@ -47,15 +49,15 @@ class HomePage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 10,
+              height: Height*0.010,
             ),
             InkWell(
               onTap: () {
                 Navigator.push(context,MaterialPageRoute(builder: (context)=>aboutus()));
               },
               child: Container(
-                width: 180,
-                height: 40,
+                width: Width*0.22,
+                height: Height*0.05,
                 decoration: BoxDecoration(
                     color: Colors.grey.shade300,
                     borderRadius: BorderRadius.circular(10)),
@@ -104,8 +106,8 @@ class HomePage extends StatelessWidget {
                     context, MaterialPageRoute(builder: (context) => Shop()));
               },
               child: Container(
-                width: 350,
-                height: 120,
+                width: Width*0.42,
+                height: Height*0.15,
                 decoration: BoxDecoration(
                   color: Colors.red.shade900,
                   borderRadius: BorderRadius.circular(15.0),
@@ -113,13 +115,18 @@ class HomePage extends StatelessWidget {
                 alignment: Alignment.topLeft,
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: Text(
-                    'Shop',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Shop',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Icon(Icons.shopping_cart_outlined,size:50,color: Colors.white,)
+                    ],
                   ),
                 ),
               ),
@@ -131,8 +138,8 @@ class HomePage extends StatelessWidget {
                 print('Register Warranty button pressed');
               },
               child: Container(
-                width: 350,
-                height: 120,
+                width: Width*0.42,
+                height: Height*0.15,
                 decoration: BoxDecoration(
                   color: Colors.orange,
                   borderRadius: BorderRadius.circular(15.0),
@@ -140,13 +147,18 @@ class HomePage extends StatelessWidget {
                 alignment: Alignment.topLeft,
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: Text(
-                    'Register Warranty',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Register Warranty',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Icon(Icons.settings_suggest_outlined,size: 50,color: Colors.white,)
+                    ],
                   ),
                 ),
               ),
@@ -158,22 +170,28 @@ class HomePage extends StatelessWidget {
                 print('Register Complaint button pressed');
               },
               child: Container(
-                width: 350,
-                height: 120,
+                width: Width*0.42,
+                height: Height*0.15,
                 decoration: BoxDecoration(
                   color: Color.fromARGB(255, 4, 46, 108),
                   borderRadius: BorderRadius.circular(15.0),
                 ),
                 alignment: Alignment.topLeft,
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Text(
-                    'Register Complaint',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
+                child: const Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Register Complaint',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height:10,),
+                      Icon(Icons.headset_outlined,size: 50,color: Colors.white,)
+                    ],
                   ),
                 ),
               ),

@@ -13,7 +13,15 @@ class aboutus extends StatelessWidget {
           children: [Container(height: Height*0.2,width: Width*0.8,
             decoration:BoxDecoration(
               color: Color(0xFFF1F1F1),borderRadius: BorderRadius.circular(50)
+            ),
+            child: Row(
+              children: [
+                Icon(Icons.arrow_back_ios,color:Colors.black,),
+                Text("Back"),
+              ],
             )
+              
+            
 
           )
 
