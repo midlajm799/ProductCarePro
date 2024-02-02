@@ -9,19 +9,21 @@ class aboutus extends StatelessWidget {
     final Width = MediaQuery.of(context).size.height;
     return Scaffold(backgroundColor: Colors.white,
       body: Container(
-        child: Column(
+        child: Column(mainAxisAlignment: MainAxisAlignment.start,
           children: [Container(height: Height*0.2,width: Width*0.8,
             decoration:BoxDecoration(
               color: Color(0xFFF1F1F1),borderRadius: BorderRadius.circular(50)
             ),
             child: Row(
-              children: [
-                Icon(Icons.arrow_back_ios,color:Colors.black,),
-                Text("Back"),
+              children: [SizedBox(width: Width*0.02,),
+                IconButton(
+                  icon: Icon(Icons.arrow_back_ios),color:Colors.black,
+                onPressed:() {},),
+                Text("Back",style: TextStyle(fontSize: Height*0.025),),
               ],
             )
-              
-            
+
+
 
           )
 

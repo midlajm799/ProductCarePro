@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
             ),
             InkWell(
               onTap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context)=>account()));
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>Account()));
               },
               child: Container(
                 width: Width*0.22,
