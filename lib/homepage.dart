@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sample/Shop.dart';
+import 'package:sample/aboutus.dart';
 import 'package:sample/sign%20in.dart';
 import 'package:sample/signup.dart';
 
@@ -48,7 +49,9 @@ class HomePage extends StatelessWidget {
               height: 10,
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>aboutus()));
+              },
               child: Container(
                 width: 180,
                 height: 40,
