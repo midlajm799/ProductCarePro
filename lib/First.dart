@@ -7,39 +7,60 @@ class FirstPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
+=======
+    final Height=MediaQuery.of(context).size.height;
+    final Width=MediaQuery.of(context).size.width;
+>>>>>>> origin/main
     return Scaffold(
-      backgroundColor: Colors.white,
       body: Container(
-        margin: EdgeInsets.only(bottom: 60),
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
+        margin: EdgeInsets.all(10),
+        height: height,
+        width: width,
+        color: Colors.white,
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            SizedBox(height: 200),
+<<<<<<< HEAD
+            Image.asset(
+              "assets/logo1.jpg",
+              height: height * .35,
+              width: width * .7,
+=======
+            SizedBox(height: Height*0.1),
             Image.asset(
               'assets/logo1.jpg',
-              height: 250,
-              width: 250,
+              height: Height*0.5,
+              width: Width*0.65,
+>>>>>>> origin/main
             ),
             Stack(
               children: [
                 Text(
                   'PRODUCT',
                   style: TextStyle(
-                      color: Color(0x33383C72),
+                      color: const Color(0x33383C72),
                       fontWeight: FontWeight.bold,
-                      fontSize: 30),
+<<<<<<< HEAD
+                      fontSize: height * .0399),
+=======
+                      fontSize: Height*0.038),
+>>>>>>> origin/main
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 22),
                   child: Text(
                     'PRODUCT',
                     style: TextStyle(
-                        color: Color(0x33383C72),
+                        color: const Color(0x33383C72),
                         fontWeight: FontWeight.bold,
-                        fontSize: 30),
+<<<<<<< HEAD
+                        fontSize: height * .0399),
+=======
+                        fontSize:Height*0.038),
+>>>>>>> origin/main
                   ),
                 ),
                 Padding(
@@ -47,48 +68,83 @@ class FirstPage extends StatelessWidget {
                   child: Text(
                     'PRODUCT',
                     style: TextStyle(
+                        color: const Color(0xFF383C72),
+                        fontWeight: FontWeight.bold,
+<<<<<<< HEAD
+                        fontSize: height * .0399),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 58.0),
+                  child: Text(
+                    'CARE PRO.',
+                    style: TextStyle(
+                        color: const Color(0xFF383C72),
+                        fontWeight: FontWeight.bold,
+                        fontSize: height * .037),
+=======
+                        fontSize: Height*0.038),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom:  5,top: 50),
+                  child:
+                  Text(
+                    'CARE PRO.',
+                    style: TextStyle(
                         color: Color(0xFF383C72),
                         fontWeight: FontWeight.bold,
-                        fontSize: 30),
+                        fontSize: Height*0.036),
+>>>>>>> origin/main
                   ),
                 ),
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 50),
-              child: Text(
-                'CARE PRO.',
-                style: TextStyle(
-                    color: Color(0xFF383C72),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 28),
-              ),
+<<<<<<< HEAD
+            SizedBox(
+              height: height * .15,
             ),
+            Text(
+              """Stay Covered,Stay Connected
+                   With Us.""",
+              style: TextStyle(
+                  color: const Color(0xFF1E1E1E),
+                  fontSize: height * .016,
+                  fontWeight: FontWeight.w500),
+            ),
+            SizedBox(
+              height: height * .008,
+=======
+
             Padding(
-              padding: const EdgeInsets.only(top: 100),
+              padding: const EdgeInsets.only(top: 55),
               child: Text(
                 """Stay Covered,Stay Connected
-                     With Us.""",
-                style: TextStyle(color: Color(0xFF1E1E1E), fontSize: 15),
+                   With Us.""",
+                style: TextStyle(color: Color(0xFF1E1E1E), fontSize: Height*0.017),
               ),
+>>>>>>> origin/main
             ),
-            Spacer(),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
                     context, MaterialPageRoute(builder: (context) => SignIn()));
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.orange, // Set the button color to orange
+                backgroundColor:
+                    Colors.orange, // Set the button color to orange
                 shape: RoundedRectangleBorder(
-                  borderRadius:
-                      BorderRadius.circular(30.0), // Add rounded corners
+                  borderRadius: BorderRadius.circular(
+                      height * .30), // Add rounded corners
                 ),
               ),
-              child: Text(
+              child: const Text(
                 "Let's Go!",
-                style: TextStyle(fontWeight: FontWeight.w700),
+                style: TextStyle(color:Colors.white,fontWeight: FontWeight.w700),
               ),
+            ),
+            SizedBox(
+              height: height * .023,
             ),
           ],
         ),
