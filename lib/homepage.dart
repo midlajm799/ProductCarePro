@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sample/Shop.dart';
 import 'package:sample/aboutus.dart';
 import 'package:sample/account.dart';
+import 'package:sample/notification.dart';
 import 'package:sample/sign%20in.dart';
 import 'package:sample/signup.dart';
 
@@ -87,7 +88,9 @@ class HomePage extends StatelessWidget {
         }),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+               Navigator.push(context,MaterialPageRoute(builder: (context) => Notificationpage()),);
+            },
             icon: ImageIcon(
               AssetImage('assets/logobell.png'),
               color: Colors.black,

@@ -106,10 +106,7 @@ class SignUp extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 10),
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => HomePage()),
-                    );
+                    Navigator.push(context,MaterialPageRoute(builder: (context) => HomePage()),);
                   },
                   style: ElevatedButton.styleFrom(
                     primary: Color.fromARGB(255, 42, 145, 196),
