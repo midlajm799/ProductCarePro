@@ -40,10 +40,27 @@ class aboutus extends StatelessWidget {
                       style: TextStyle(fontSize: Height * 0.025),
                     ),
                   ],
-                ))
+                )
+                
+                ),
+                Container(
+                  child: Text(
+                    "At ProductCarePro, our primary focus is on ensuring customer satisfaction and product longevity.We take pride in offering top-notch repair services,maintenance plans,and more to meet our customer's diverse needs.\n\n\nOur team consists of dedicated professionals,each contributing unique skills and experiences,all aligned to deliver the highest standards of service.We collaborate seamlessly to ensure a seamless experience for our customers.\n\n\nProductCarePro's foundation is built upon core values and principles that guide our operations and interactions.Our commitment to quality and sustainability is unwavering.",
+                  style:TextStyle(fontSize: Width*0.02),),
+                  
+
+                  
+
+                ),
           ],
+          
+
+
+
         ),
+        
       ),
-    );
+      );
+   
   }
 }
