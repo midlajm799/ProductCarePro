@@ -86,7 +86,7 @@ class Notificationpage extends StatelessWidget {
           ElevatedButton(onPressed: (){
              Navigator.push(context,MaterialPageRoute(builder: (context) => HomePage()),);
           },
-            style: ElevatedButton.styleFrom(backgroundColor: Color.fromARGB(0, 0, 0, 0),shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(height*.04))),
+            style: ElevatedButton.styleFrom(backgroundColor: Color.fromARGB(255, 68, 68, 68),shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(height*.04))),
               child: Text("HOME",style: TextStyle(fontWeight: FontWeight.bold),),),
           SizedBox(height: height*.029,)
         ],

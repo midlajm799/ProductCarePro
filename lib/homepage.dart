@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sample/Shop.dart';
 import 'package:sample/aboutus.dart';
 import 'package:sample/account.dart';
+import 'package:sample/compalints.dart';
 import 'package:sample/notification.dart';
 import 'package:sample/sign%20in.dart';
 import 'package:sample/signup.dart';
@@ -54,7 +55,7 @@ class HomePage extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                Navigator.push(context,MaterialPageRoute(builder: (context)=>aboutus()));
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>AboutUs()));
               },
               child: Container(
                 width: Width*0.22,
@@ -168,10 +169,8 @@ class HomePage extends StatelessWidget {
             ),
             SizedBox(height: 20), // Add some space between the containers
             InkWell(
-              onTap: () {
-                // Add your functionality for the "Register Complaint" button
-                print('Register Complaint button pressed');
-              },
+              onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => YourComplaint()),);
+                 },
               child: Container(
                 width: Width*0.42,
                 height: Height*0.15,
