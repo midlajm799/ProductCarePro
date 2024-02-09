@@ -6,6 +6,7 @@ import 'package:sample/compalints.dart';
 import 'package:sample/notification.dart';
 import 'package:sample/sign%20in.dart';
 import 'package:sample/signup.dart';
+import 'package:sample/warrentyregister.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -138,8 +139,7 @@ class HomePage extends StatelessWidget {
             SizedBox(height: 20), // Add some space between the containers
             InkWell(
               onTap: () {
-                // Add your functionality for the "Register Warranty" button
-                print('Register Warranty button pressed');
+               Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Warranty()));
               },
               child: Container(
                 width: Width*0.42,
